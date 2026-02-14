@@ -1,5 +1,9 @@
 # MockFactory CLI
 
+[![PyPI version](https://badge.fury.io/py/mockfactory-cli.svg)](https://pypi.org/project/mockfactory-cli/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/mockfactory-cli.svg)](https://pypi.org/project/mockfactory-cli/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Command-line interface for [MockFactory](https://mockfactory.io) - a secure multi-language code execution sandbox.
 
 Execute code in isolated Docker containers with comprehensive security controls, directly from your terminal.
