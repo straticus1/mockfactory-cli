@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mockfactory-cli"
+version = "0.1.0"
+description = "Command-line interface for MockFactory code execution sandbox"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "After Dark Systems", email = "support@afterdarksystems.com"}
+]
+keywords = ["mockfactory", "code-execution", "sandbox", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "click>=8.1.0",
+    "requests>=2.31.0",
+    "rich>=13.0.0",
+    "pydantic>=2.0.0",
+    "keyring>=24.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://mockfactory.io"
+Documentation = "https://github.com/afterdarksystems/mockfactory-cli"
+Repository = "https://github.com/afterdarksystems/mockfactory-cli"
+Issues = "https://github.com/afterdarksystems/mockfactory-cli/issues"
+
+[project.scripts]
+mockfactory = "mockfactory_cli.cli:main"
+mf = "mockfactory_cli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mockfactory_cli*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py38", "py39", "py310", "py311"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"
